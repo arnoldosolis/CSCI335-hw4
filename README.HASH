@@ -1,0 +1,52 @@
+Homework 4 by Arnoldo Solis
+
+All Parts Completed
+
+For part 1: 
+
+In the file quadratic_probing.h, since the quadratic probing was already implemented all I had to do was implement some getter functions.
+I first implemented a funciton called getElementCount() which return the amount of elements(N) in the hashtable. I actually struggled for a little bit 
+between getElementCount() and the next one that I implemented which was the size of the table(T) because I was not sure how to return the actual array size
+and then I realized that all I needed to do was return array_.size() and that was my getCurrentSize() functions. My third function was not itself trick but getting 
+to it was. I was not sure how to get the amount of collisions and thats actually how I also realized how to implement Linear. Essentially I just added a counter variable
+countCollisions_ in my while loop of my findPos function and then made a function collisionCount() that returned it. I now had 60% of the required numerical output. The
+other 40% was me implementing a funciton that calcualted the load fact (the function name that did this is theLoadFactor()) and then the average number of collisions (the
+name of that function was averageCollisions()).
+
+Note: For collisionsCounter_ I was getting a "error: increment of read-only location ‘((const HashTable<HashedObj>*)this)->HashTable<HashedObj>::collisionCount_’".
+I "fixed" it by adding mutable. The was one of the errors that really halted my progress and I didn't know how else to fix it. I was wondering if there was a better way.
+
+The second half of the output was me needing to check wehter each word in another given file was in the hash table that was already implemented for me and to print wehter
+or not the word is found and how many probes it took to find the word. What I did was read in the query file and immediately after implemented a function called resetCollisionCount()
+in order to reset the collisionCount_ counter before counting the amount of probes that it took to find any given word within the file. I wasn't sure exactly on how to do this as I thought
+I would have to implement another function entirely to count specific word probes. I realized that was definelty over complicating things and wrote a while loop that had an if else statement
+that checked if the word was or was not in the hash table and counted how many probes it took to find them.
+
+Implementing linear probing was incredibly easy. All I did was copy paste all the code from quadratic_probing and changed the variables to suit the linear probing implementation. Then I removed
+a single line of code in findPos and I was done. Though when I compiled I had function redefinition errors so all I did to fix that was remove the namespace functions and that worked. Everything else was
+pretty much implemented for me in the previous part.
+
+For part 2:
+For double hashing again I copy pasted my code from quadratic probing but this time I added a private int variable R. I also added as per you hint the setR(R) function. I also created a second hash function
+which I got from the textbook (its called InternalSecondHash). I was a little lost on how to do the actually double hashing. I kept getting floating point excpetions and it took me a couple of hours to figure
+out what was wrong with it. I thought that maybe it was something in my hash function that I had miswritten. I then realized after several hours of trying to debug that it was nonsensical to add the second hash
+function onto itself. I was essentially treating it to much like quadratic probing because you mentioned that it was a variant. In a sense I guess it was I still don't understand. Either way I stopped adding the
+second hash function onto itself. Since I copy pasted the previous code all functions needed for output where there and so it made getting the output required for the assignment easier.
+
+For part 3:
+
+This took a while. So first thing to note is that the original starter code that I was given created a hash table called dictionary that used double hashing for its collision handelling. I changed it so that it uses
+quadratic probing instead. The reason I did this was because when I was trying to test if I was properly inserting the dictionary file into the dictionary hash table I kept getting floating point errors. I tried to look back
+at my double hashing and spent a lot of time across different days trying to figure out what the issue was. I was lost becuase it worked just fine when I ran it with the create and test hash. The moment I changed it quadratic
+it was smooth sailing (somewhat). 
+
+I then created a string that would store the document file word by word so that I had something an object to perform the spell check operation on. I then set up a while loop that takes the entire document file in and within that
+while loop I put another while loop that took in the lines in the document file and separted them by word. After each word was isolated and transformed (made into lowercase and removed punctuation), I called spellcheck(). 
+
+SpellCheck was the function that implemented all cases mention on the homework4.pdf. My biggest issue was the insertion of character. It kept giving me comparison errors and then floating errors. The way I got around it was saving
+the size of the word into an int variable. I also changed the for loop inside to loop with the char type not int type. Specifically, I set it to loop from 97 to 122 which is the same as saying loop from lower case a to lower case z.
+
+The second case was for the most part trivial just took a little bit of thinking.
+
+The third case I got a seg fault but I realized why pretty quickly. Essentialy since I was accessing the adjacent character when it got to the end of the word it would try to access something that wasn't there. So all I was subtract 1 from
+the word size and it fixed the issue.

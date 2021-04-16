@@ -1,0 +1,16 @@
+﻿  create_and_test_hash.cc
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(255,19): error C2146: syntax error: missing ')' before identifier 'and'
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(255,19): error C2065: 'and': undeclared identifier
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(255,23): error C2146: syntax error: missing ';' before identifier 'argc'
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(255,32): error C2059: syntax error: ')'
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(258,66): error C2059: syntax error: ';'
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(264,24): error C2065: 'argc': undeclared identifier
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(264,30): error C2065: 'argv': undeclared identifier
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(264,34): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(264,5): error C2365: 'testHashingWrapper': redefinition; previous definition was 'function'
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(32): message : see declaration of 'testHashingWrapper'
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(265,5): error C2059: syntax error: 'return'
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(266,1): error C2059: syntax error: '}'
+C:\Users\arnol\OneDrive - Hunter - CUNY\SPRING2021\[CSCI335]SoftwareDesignAndAnalysis3\homework4\create_and_test_hash.cc(266,1): error C2143: syntax error: missing ';' before '}'
+  spell_check.cc
+  Generating Code...
